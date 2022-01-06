@@ -4,6 +4,7 @@
   "description": "",
   "license": "",
   "scripts": {
+    "clean": "rimraf .cache ./build ./public/build",
     "build": "cross-env NODE_ENV=production remix build",
     "dev": "cross-env NODE_ENV=development run-p dev:*",
     "postinstall": "remix setup cloudflare-pages",
@@ -16,17 +17,18 @@
     "@remix-run/react": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "remix": "^1.1.1"
+    "remix": "^1.1.1",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.2.0",
+    "@cloudflare/workers-types": "^3.3.0",
     "@remix-run/dev": "^1.1.1",
-    "@types/react": "^17.0.24",
-    "@types/react-dom": "^17.0.9",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
     "cross-env": "^7.0.3",
-    "esbuild": "0.13.14",
+    "esbuild": "0.14.10",
     "npm-run-all": "^4.1.5",
-    "typescript": "^4.1.2",
+    "typescript": "^4.5.4",
     "wrangler": "^0.0.0-9cef492"
   },
   "engines": {
