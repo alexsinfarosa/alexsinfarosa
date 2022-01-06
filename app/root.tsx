@@ -7,7 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'remix'
-import twStyleUrl from './styles/tailwind.css'
+import twStyleUrl from '~/tailwind.css'
 
 export let links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: twStyleUrl }]
