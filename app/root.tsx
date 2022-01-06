@@ -1,16 +1,21 @@
+import type { LinksFunction, MetaFunction } from 'remix'
 import {
   Links,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
-} from "remix";
-import type { MetaFunction } from "remix";
+  ScrollRestoration,
+} from 'remix'
+import twStyleUrl from './styles/tailwind.css'
+
+export let links: LinksFunction = () => {
+  return [{ rel: 'stylesheet', href: twStyleUrl }]
+}
 
 export const meta: MetaFunction = () => {
-  return { title: "Alex Sinfarosa" };
-};
+  return { title: 'Alex Sinfarosa' }
+}
 
 export default function App() {
   return (
@@ -25,8 +30,8 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
-  );
+  )
 }
