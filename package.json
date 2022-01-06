@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "remix-app-template",
-  "description": "",
+  "name": "alexsinfarosa.com",
+  "description": "Alex Sinfarosa Website",
   "license": "",
   "scripts": {
     "clean": "rimraf .cache ./build ./public/build",
