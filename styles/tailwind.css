@@ -10,3 +10,9 @@
     @apply h-full;
   }
 }
+
+@layer components {
+  .ciccio {
+    @apply text-red-500 font-semibold;
+  }
+}

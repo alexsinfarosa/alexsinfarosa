@@ -7,10 +7,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'remix'
-import twStyleUrl from '~/tailwind.css'
+import styles from './tailwind.css'
 
 export let links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: twStyleUrl }]
+  return [
+    { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
+    { rel: 'stylesheet', href: styles },
+  ]
 }
 
 export const meta: MetaFunction = () => {
