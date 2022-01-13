@@ -1,8 +1,7 @@
 import { MailIcon } from '@heroicons/react/solid'
-import clsx from 'clsx'
 
 const GithubIcon = (prop: any) => (
-  <svg width="24" height="24" fill="currentColor" className={prop.className}>
+  <svg viewBox="0 0 20 20" fill="currentColor" className={prop.className}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -12,12 +11,7 @@ const GithubIcon = (prop: any) => (
 )
 
 const TwitterIcon = (prop: any) => (
-  <svg
-    className={prop.className}
-    fill="currentColor"
-    viewBox="0 0 20 20"
-    aria-hidden="true"
-  >
+  <svg className={prop.className} fill="currentColor" viewBox="0 0 20 20">
     <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
   </svg>
 )
@@ -42,16 +36,16 @@ const links = [
 
 function Resume() {
   return (
-    <div className="h-screen px-4 py-16 mx-auto prose border rounded-lg sm:px-6 lg:px-8">
+    <div className="h-screen px-4 py-16 mx-auto prose border rounded-lg prose-slate sm:px-6 lg:px-8">
       <h1>Alex Sinfarosa</h1>
-      <h2 className="text-center text-orange-600">Front-End Developer</h2>
+      <h2 className="text-center text-teal-600">Front-End Developer</h2>
 
-      <div className="flex space-x-4">
+      <div className="flex flex-col sm:flex-row justify-evenly">
         {links.map((link) => (
           <a
             key={link.name}
             href={link.to}
-            className="relative inline-flex items-center px-4 py-2 text-sm font-medium no-underline rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="relative inline-flex items-center px-4 py-2 m-1 text-sm font-medium no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <link.icon className="w-5 h-5 mr-2" aria-hidden="true" />
             <span>{link.name}</span>
@@ -60,12 +54,6 @@ function Resume() {
       </div>
 
       <h2>Work Experiance</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda omnis
-        id blanditiis voluptatum reiciendis a pariatur optio reprehenderit
-        ducimus voluptate perspiciatis porro distinctio cupiditate facilis
-        maiores, iure molestiae. Unde, error.
-      </p>
     </div>
   )
 }
