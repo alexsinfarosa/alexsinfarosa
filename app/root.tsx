@@ -11,8 +11,8 @@ import styles from './tailwind.css'
 
 export let links: LinksFunction = () => {
   return [
-    { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
     { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: '/fonts/inter/variable.css' },
   ]
 }
 

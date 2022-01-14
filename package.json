@@ -1,20 +1,27 @@
 {
   "private": true,
   "name": "alexsinfarosa.com",
-  "description": "Alex Sinfarosa Website",
+  "description": "Personal website of Alex Sinfarosa, Front End Engineer",
+  "version": "0.0.1",
   "license": "",
   "scripts": {
     "clean": "rimraf .cache ./build ./public/build",
-    "build": "cross-env NODE_ENV=production npm run build:css remix build",
+    "build": "npm run build:production",
     "dev": "cross-env NODE_ENV=development run-p dev:*",
     "postinstall": "remix setup cloudflare-pages",
     "dev:remix": "remix watch",
     "dev:wrangler": "wrangler pages dev ./public --watch ./build",
     "start": "npm run dev:wrangler",
     "dev:css": "tailwindcss -i ./styles/tailwind.css -o ./app/tailwind.css --watch",
-    "build:css": "tailwindcss -i ./styles/tailwind.css -o ./app/tailwind.css --minify"
+    "build:fonts": "mkdir -p ./public/fonts && cp -r ./node_modules/@fontsource/inter ./public/fonts",
+    "prebuild:css": "npm run build:fonts",
+    "build:css": "tailwindcss -i ./styles/tailwind.css -o ./app/tailwind.css",
+    "build:remix": "remix build",
+    "build:production": "cross-env NODE_ENV=production npm run build:css -- --minify && npm run build:remix",
+    "build:development": "cross-env NODE_ENV=development npm run build:css && npm run build:remix"
   },
   "dependencies": {
+    "@fontsource/inter": "^4.5.1",
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "@remix-run/cloudflare-pages": "^1.1.1",

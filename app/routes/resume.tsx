@@ -37,7 +37,14 @@ const links = [
 function Resume() {
   return (
     <div className="h-screen px-4 py-16 mx-auto prose border rounded-lg prose-slate sm:px-6 lg:px-8">
-      <h1>Alex Sinfarosa</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="m-0">Alex Sinfarosa</h1>
+        {/* <img
+          className="inline-block p-0 m-0 rounded-full w-28 h-28"
+          src="./public/alex.jpg"
+          alt="Alex profile picture"
+        /> */}
+      </div>
       <h2 className="text-center text-teal-600">Front-End Developer</h2>
 
       <div className="flex flex-col sm:flex-row justify-evenly">
@@ -54,6 +61,60 @@ function Resume() {
       </div>
 
       <h2>Work Experiance</h2>
+      <div className="grid grid-cols-1 text-xs md:grid-cols-4 lg:gap-8">
+        <div className="flex items-baseline justify-end mb-2 md:hidden">
+          <div>
+            <span className="text-base font-semibold">2017 - current</span>,
+            <span className="ml-1 text-sm text-gray-700">Remote</span>
+          </div>
+        </div>
+        <div className="hidden text-center md:block">
+          <span className="text-base font-semibold">2017 - current</span>
+          <div className="flex flex-col">
+            <span className="text-sm text-gray-700">Remote</span>
+          </div>
+        </div>
+        <div className="col-span-3">
+          <h3 className="m-0 text-base font-semibold">
+            Senior Front End Developer
+          </h3>
+          <span className="font-medium text-gray-700">
+            <a
+              href="https://www.nrcc.cornell.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <em>NRCC - Cornell University</em>
+            </a>
+          </span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+            voluptate consectetur quae incidunt alias enim odio doloribus sunt
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis, dolores.
+            </li>
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Similique doloribus hic neque.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Veritatis eligendi doloribus dolorem nisi nam.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, enim
+              officia?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              excepturi dolore, labore quod facere maiores hic.
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }
