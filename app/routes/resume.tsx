@@ -1,5 +1,6 @@
 import { MailIcon } from '@heroicons/react/solid'
-
+import profilePicture from '../../public/images/profile_picture.jpg'
+console.log(profilePicture)
 const GithubIcon = (prop: any) => (
   <svg viewBox="0 0 20 20" fill="currentColor" className={prop.className}>
     <path
@@ -39,11 +40,11 @@ function Resume() {
     <div className="h-screen px-4 py-16 mx-auto prose border rounded-lg prose-slate sm:px-6 lg:px-8">
       <div className="flex items-center justify-between">
         <h1 className="m-0">Alex Sinfarosa</h1>
-        {/* <img
-          className="inline-block p-0 m-0 rounded-full w-28 h-28"
-          src="./public/alex.jpg"
+        <img
+          className="inline-block p-0 m-0 rounded-full w-36 h-36 "
+          src={profilePicture}
           alt="Alex profile picture"
-        /> */}
+        />
       </div>
       <h2 className="text-center text-teal-600">Front-End Developer</h2>
 
