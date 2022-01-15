@@ -51,14 +51,14 @@ function Resume() {
       <div className="flex items-center justify-between">
         <h1 className="m-0">Alex Sinfarosa</h1>
         <img
-          className="inline-block p-0 m-0 rounded-full w-36 h-36 "
+          className="inline-block w-32 h-32 p-0 m-0 rounded-full sm:w-36 sm:h-36 "
           src={profilePicture}
           alt="Alex profile picture"
         />
       </div>
       <h2 className="text-center text-teal-600">Front-End Developer</h2>
 
-      <div className="flex flex-col sm:flex-row justify-evenly">
+      <div className="flex flex-col py-1 sm:flex-row justify-evenly">
         {links.map((link) => (
           <a
             key={link.name}
@@ -71,9 +71,7 @@ function Resume() {
         ))}
       </div>
 
-      <h2 className="block mt-10 text-2xl font-extrabold leading-6 tracking-tight text-gray-900 sm:text-3xl">
-        Summary
-      </h2>
+      <h2>Summary</h2>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
         beatae consequuntur deleniti nostrum ut odit, quaerat minima. Optio
@@ -81,28 +79,24 @@ function Resume() {
         dicta. Nisi, rem!
       </p>
 
-      <h2 className="block mt-10 text-2xl font-extrabold leading-6 tracking-tight text-gray-900 sm:text-3xl">
-        Experience
-      </h2>
+      <h2>Experience</h2>
       {/* First */}
-      <section className="grid grid-cols-1 text-xs md:grid-cols-4 lg:gap-8">
-        <div className="flex items-center justify-end text-center md:flex-col md:justify-start">
-          <span className="mr-2 text-sm font-bold text-gray-500 md:mr-0 md:text-gray-900 md:mb-2 md:text-base md:font-semibold">
-            2017 - current
-          </span>
+      <section className="grid grid-cols-1 sm:gap-8 sm:text-sm sm:grid-cols-4">
+        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:font-extrabold sm:text-gray-900">
+          2017 - CURRENT
+        </span>
 
-          <div className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-            <LocationMarkerIcon
-              className="-ml-0.5 mr-1 h-4 w-4"
-              aria-hidden="true"
-            />
-            Remote
+        <div className="col-span-3 mt-1 sm:mt-0">
+          <div className="flex items-center justify-between">
+            <h3 className="m-0">Senior Front End Developer</h3>
+            <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+              <LocationMarkerIcon
+                className="-ml-0.5 mr-1 h-4 w-4"
+                aria-hidden="true"
+              />
+              Remote
+            </div>
           </div>
-        </div>
-        <div className="col-span-3 mt-1 md:mt-0">
-          <h3 className="m-0 text-base font-semibold">
-            Senior Front End Developer
-          </h3>
           <span className="font-medium text-gray-700">
             <a
               href="https://www.nrcc.cornell.edu/"
@@ -142,22 +136,22 @@ function Resume() {
       </section>
 
       {/* Second */}
-      <section className="grid grid-cols-1 mt-8 text-xs md:grid-cols-4 lg:gap-8">
-        <div className="flex items-center justify-end text-center md:flex-col md:justify-start">
-          <span className="inline-flex mr-2 text-sm font-bold text-gray-500 md:text-gray-900 md:text-base md:font-semibold md:mb-2">
-            Summer '16
-          </span>
+      <section className="grid grid-cols-1 mt-8 sm:gap-8 sm:text-sm sm:grid-cols-4">
+        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:font-extrabold sm:text-gray-900">
+          SUMMER '16
+        </span>
 
-          <div className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-            <LocationMarkerIcon
-              className="-ml-0.5 mr-1 h-4 w-4"
-              aria-hidden="true"
-            />
-            New York, NY
+        <div className="col-span-3 mt-1 sm:mt-0">
+          <div className="flex items-center justify-between">
+            <h3 className="m-0">Senior Front End Developer</h3>
+            <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+              <LocationMarkerIcon
+                className="-ml-0.5 mr-1 h-4 w-4"
+                aria-hidden="true"
+              />
+              NY, NY
+            </div>
           </div>
-        </div>
-        <div className="col-span-3 mt-1 md:mt-0">
-          <h3 className="m-0 text-base font-semibold">Data Science Intern</h3>
           <span className="font-medium text-gray-700">
             <em>Berkshire Hathaway Real Estate, NY</em>
           </span>
@@ -182,27 +176,25 @@ function Resume() {
         </div>
       </section>
 
-      <h2 className="block mt-10 text-2xl font-extrabold leading-6 tracking-tight text-gray-900 sm:text-3xl">
-        Education
-      </h2>
-      <section className="grid grid-cols-1 mt-8 text-xs md:grid-cols-4 lg:gap-8">
-        <div className="flex items-center justify-end text-center md:flex-col md:justify-start">
-          <span className="inline-flex mr-2 text-sm font-bold text-gray-500 md:text-gray-900 md:text-base md:font-semibold md:mb-2">
-            2012 - 2016 (B.S.)
-          </span>
+      <h2>Education</h2>
+      <section className="grid grid-cols-1 sm:gap-8 sm:text-sm sm:grid-cols-4">
+        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:font-extrabold sm:text-gray-900">
+          2012 - 2016 (B.S.)
+        </span>
 
-          <div className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-            <LocationMarkerIcon
-              className="-ml-0.5 mr-1 h-4 w-4"
-              aria-hidden="true"
-            />
-            Ithaca, NY
+        <div className="col-span-3 mt-1 sm:mt-0">
+          <div className="flex items-center justify-between">
+            <h3 className="m-0">
+              Information Science, concentration in Data Science
+            </h3>
+            <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+              <LocationMarkerIcon
+                className="-ml-0.5 mr-1 h-4 w-4"
+                aria-hidden="true"
+              />
+              Ithaca, NY
+            </div>
           </div>
-        </div>
-        <div className="col-span-3 mt-1 md:mt-0">
-          <h3 className="m-0 text-base font-semibold">
-            Information Science, concentration in Data Science
-          </h3>
           <span className="font-medium text-gray-700">
             <a
               href="https://www.engineering.cornell.edu/data-science"
