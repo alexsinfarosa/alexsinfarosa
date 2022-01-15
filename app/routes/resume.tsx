@@ -1,18 +1,28 @@
-import { MailIcon } from '@heroicons/react/solid'
+import { LocationMarkerIcon, MailIcon } from '@heroicons/react/solid'
 import profilePicture from '../../public/images/profile_picture.jpg'
-console.log(profilePicture)
+
 const GithubIcon = (prop: any) => (
-  <svg viewBox="0 0 20 20" fill="currentColor" className={prop.className}>
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"
-    ></path>
+  <svg
+    role="img"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    className={prop.className}
+  >
+    <title>GitHub</title>
+    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
   </svg>
 )
 
 const TwitterIcon = (prop: any) => (
-  <svg className={prop.className} fill="currentColor" viewBox="0 0 20 20">
+  <svg
+    role="img"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    className={prop.className}
+  >
+    <title>Twitter</title>
     <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
   </svg>
 )
@@ -37,7 +47,7 @@ const links = [
 
 function Resume() {
   return (
-    <div className="h-screen px-4 py-16 mx-auto prose border rounded-lg prose-slate sm:px-6 lg:px-8">
+    <div className="px-4 py-16 mx-auto prose border rounded-lg prose-slate max-w-prose sm:px-6 lg:px-8">
       <div className="flex items-center justify-between">
         <h1 className="m-0">Alex Sinfarosa</h1>
         <img
@@ -61,21 +71,35 @@ function Resume() {
         ))}
       </div>
 
-      <h2>Work Experiance</h2>
-      <div className="grid grid-cols-1 text-xs md:grid-cols-4 lg:gap-8">
-        <div className="flex items-baseline justify-end mb-2 md:hidden">
-          <div>
-            <span className="text-base font-semibold">2017 - current</span>,
-            <span className="ml-1 text-sm text-gray-700">Remote</span>
+      <h2 className="block mt-10 text-2xl font-extrabold leading-6 tracking-tight text-gray-900 sm:text-3xl">
+        Summary
+      </h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+        beatae consequuntur deleniti nostrum ut odit, quaerat minima. Optio
+        explicabo doloremque fugiat alias. Veritatis vitae voluptates eius ad
+        dicta. Nisi, rem!
+      </p>
+
+      <h2 className="block mt-10 text-2xl font-extrabold leading-6 tracking-tight text-gray-900 sm:text-3xl">
+        Experience
+      </h2>
+      {/* First */}
+      <section className="grid grid-cols-1 text-xs md:grid-cols-4 lg:gap-8">
+        <div className="flex items-center justify-end text-center md:flex-col md:justify-start">
+          <span className="mr-2 text-sm font-bold text-gray-500 md:mr-0 md:text-gray-900 md:mb-2 md:text-base md:font-semibold">
+            2017 - current
+          </span>
+
+          <div className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            <LocationMarkerIcon
+              className="-ml-0.5 mr-1 h-4 w-4"
+              aria-hidden="true"
+            />
+            Remote
           </div>
         </div>
-        <div className="hidden text-center md:block">
-          <span className="text-base font-semibold">2017 - current</span>
-          <div className="flex flex-col">
-            <span className="text-sm text-gray-700">Remote</span>
-          </div>
-        </div>
-        <div className="col-span-3">
+        <div className="col-span-3 mt-1 md:mt-0">
           <h3 className="m-0 text-base font-semibold">
             Senior Front End Developer
           </h3>
@@ -115,7 +139,85 @@ function Resume() {
             </li>
           </ul>
         </div>
-      </div>
+      </section>
+
+      {/* Second */}
+      <section className="grid grid-cols-1 mt-8 text-xs md:grid-cols-4 lg:gap-8">
+        <div className="flex items-center justify-end text-center md:flex-col md:justify-start">
+          <span className="inline-flex mr-2 text-sm font-bold text-gray-500 md:text-gray-900 md:text-base md:font-semibold md:mb-2">
+            Summer '16
+          </span>
+
+          <div className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            <LocationMarkerIcon
+              className="-ml-0.5 mr-1 h-4 w-4"
+              aria-hidden="true"
+            />
+            New York, NY
+          </div>
+        </div>
+        <div className="col-span-3 mt-1 md:mt-0">
+          <h3 className="m-0 text-base font-semibold">Data Science Intern</h3>
+          <span className="font-medium text-gray-700">
+            <em>Berkshire Hathaway Real Estate, NY</em>
+          </span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+            voluptate consectetur quae incidunt alias enim odio doloribus sunt
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis, dolores.
+            </li>
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Similique doloribus hic neque.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Veritatis eligendi doloribus dolorem nisi nam.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <h2 className="block mt-10 text-2xl font-extrabold leading-6 tracking-tight text-gray-900 sm:text-3xl">
+        Education
+      </h2>
+      <section className="grid grid-cols-1 mt-8 text-xs md:grid-cols-4 lg:gap-8">
+        <div className="flex items-center justify-end text-center md:flex-col md:justify-start">
+          <span className="inline-flex mr-2 text-sm font-bold text-gray-500 md:text-gray-900 md:text-base md:font-semibold md:mb-2">
+            2012 - 2016 (B.S.)
+          </span>
+
+          <div className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            <LocationMarkerIcon
+              className="-ml-0.5 mr-1 h-4 w-4"
+              aria-hidden="true"
+            />
+            Ithaca, NY
+          </div>
+        </div>
+        <div className="col-span-3 mt-1 md:mt-0">
+          <h3 className="m-0 text-base font-semibold">
+            Information Science, concentration in Data Science
+          </h3>
+          <span className="font-medium text-gray-700">
+            <a
+              href="https://www.engineering.cornell.edu/data-science"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <em>Cornell University</em>
+            </a>
+          </span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+            voluptate consectetur quae incidunt alias enim odio doloribus sunt
+          </p>
+        </div>
+      </section>
     </div>
   )
 }
