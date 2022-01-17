@@ -56,7 +56,7 @@ function Resume() {
           alt="Alex profile picture"
         />
       </div>
-      <h2 className="text-center text-teal-600">Front-End Developer</h2>
+      <h2 className="text-center text-teal-600">Front-End Engineer</h2>
 
       <div className="flex flex-col py-1 sm:flex-row justify-evenly">
         {links.map((link) => (
@@ -73,7 +73,7 @@ function Resume() {
 
       <h2>Summary</h2>
       <p>
-        Senior Front-end Developer with 5+ years of experience designing,
+        Senior Front-end Engineer with 5+ years of experience designing,
         developing, and managing complex web/mobile applications. Participated
         in projects in all stages of the product life cycle.
       </p>
@@ -217,8 +217,8 @@ function Resume() {
         <div className="col-span-3 mt-1 sm:mt-0">
           <div className="flex items-center justify-between">
             <h3 className="m-0">
-              First Prize Winner!{' '}
-              <em>Civic Hackathon: Plowing Through the Data</em>.
+              1st Place in the City of Syracuse's "Plowing Through the Data"
+              civic hackathon.
             </h3>
             <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
               <LocationMarkerIcon
@@ -234,13 +234,14 @@ function Resume() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <em>hackathon.com repo...</em>
+              <em>civic-Hackathon-Plowing-Through-Data</em>
             </a>
           </span>
           <p>
-            For this hackathon, participants are challenged to create data
-            visualizations, find interesting insights, and help City staff
-            determine what they should look for from this data when it snows.
+            Sponsored by the City of Syracuse, Syracuse University, and AT&T,
+            the hackathon presented participants with the city's GPS data from
+            their snowplows, and challenged them to come up with a data related
+            project which could help the city with their snow removal efforts.
           </p>
         </div>
       </section>
