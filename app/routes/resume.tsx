@@ -73,16 +73,15 @@ function Resume() {
 
       <h2>Summary</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-        beatae consequuntur deleniti nostrum ut odit, quaerat minima. Optio
-        explicabo doloremque fugiat alias. Veritatis vitae voluptates eius ad
-        dicta. Nisi, rem!
+        Senior Front-end Developer with 5+ years of experience designing,
+        developing, and managing complex web/mobile applications. Participated
+        in projects in all stages of the product life cycle.
       </p>
 
-      <h2>Experience</h2>
+      <h2 className="sm:pb-1 sm:border-b">Experience</h2>
       {/* First */}
       <section className="grid grid-cols-1 sm:gap-8 sm:text-sm sm:grid-cols-4">
-        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:font-extrabold sm:text-gray-900">
+        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:text-gray-900">
           2017 - CURRENT
         </span>
 
@@ -137,13 +136,13 @@ function Resume() {
 
       {/* Second */}
       <section className="grid grid-cols-1 mt-8 sm:gap-8 sm:text-sm sm:grid-cols-4">
-        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:font-extrabold sm:text-gray-900">
+        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:text-gray-900">
           SUMMER '16
         </span>
 
         <div className="col-span-3 mt-1 sm:mt-0">
           <div className="flex items-center justify-between">
-            <h3 className="m-0">Senior Front End Developer</h3>
+            <h3 className="m-0">Data Science Intern</h3>
             <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
               <LocationMarkerIcon
                 className="-ml-0.5 mr-1 h-4 w-4"
@@ -176,17 +175,15 @@ function Resume() {
         </div>
       </section>
 
-      <h2>Education</h2>
+      <h2 className="sm:pb-1 sm:border-b">Education</h2>
       <section className="grid grid-cols-1 sm:gap-8 sm:text-sm sm:grid-cols-4">
-        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:font-extrabold sm:text-gray-900">
-          2012 - 2016 (B.S.)
+        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:text-gray-900">
+          2012 - 2016
         </span>
 
         <div className="col-span-3 mt-1 sm:mt-0">
           <div className="flex items-center justify-between">
-            <h3 className="m-0">
-              Information Science, concentration in Data Science
-            </h3>
+            <h3 className="m-0">Bachelor of Science (B.Sc.), Data Science</h3>
             <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
               <LocationMarkerIcon
                 className="-ml-0.5 mr-1 h-4 w-4"
@@ -207,6 +204,69 @@ function Resume() {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
             voluptate consectetur quae incidunt alias enim odio doloribus sunt
+          </p>
+        </div>
+      </section>
+
+      <h2 className="sm:pb-1 sm:border-b">Awards & Achievements</h2>
+      <section className="grid grid-cols-1 sm:gap-8 sm:text-sm sm:grid-cols-4">
+        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:text-gray-900">
+          2018
+        </span>
+
+        <div className="col-span-3 mt-1 sm:mt-0">
+          <div className="flex items-center justify-between">
+            <h3 className="m-0">
+              First Prize Winner!{' '}
+              <em>Civic Hackathon: Plowing Through the Data</em>.
+            </h3>
+            <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+              <LocationMarkerIcon
+                className="-ml-0.5 mr-1 h-4 w-4"
+                aria-hidden="true"
+              />
+              Remote
+            </div>
+          </div>
+          <span className="font-medium text-gray-700">
+            <a
+              href="https://www.nrcc.cornell.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <em>hackathon.com repo...</em>
+            </a>
+          </span>
+          <p>
+            For this hackathon, participants are challenged to create data
+            visualizations, find interesting insights, and help City staff
+            determine what they should look for from this data when it snows.
+          </p>
+        </div>
+      </section>
+
+      <section className="grid grid-cols-1 sm:gap-8 sm:text-sm sm:grid-cols-4">
+        <span className="col-span-1 pt-1 font-bold text-gray-500 sm:text-gray-900">
+          2006 - 2011
+        </span>
+
+        <div className="col-span-3 mt-1 sm:mt-0">
+          <div className="flex items-center justify-between">
+            <h3 className="m-0">Restaurant Manager</h3>
+            <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+              <LocationMarkerIcon
+                className="-ml-0.5 mr-1 h-4 w-4"
+                aria-hidden="true"
+              />
+              NY, NY
+            </div>
+          </div>
+          <p>
+            Restaurant Manager with 5+ years of experience managing a
+            high-quality and fast-paced restaurants. Ability to train staff to
+            the highest standards of customer service, ensuring increased
+            customer satisfaction, reduced staff turnover rates, and a 92% rise
+            in sales through upselling techniques.
           </p>
         </div>
       </section>
