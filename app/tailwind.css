@@ -1105,6 +1105,10 @@ body {
   margin: 0.25rem;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1405,6 +1409,14 @@ body {
   line-height: 2;
 }
 
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -1494,6 +1506,36 @@ body {
 .prose-h2\:text-green-600 :is(:where(h2):not(:where([class~="not-prose"] *))) {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.prose-h2\:text-green-500 :is(:where(h2):not(:where([class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.prose-h2\:text-green-700 :is(:where(h2):not(:where([class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+
+.prose-h2\:text-green-400 :is(:where(h2):not(:where([class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.prose-h2\:text-green-200 :is(:where(h2):not(:where([class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: rgb(187 247 208 / var(--tw-text-opacity));
+}
+
+.prose-h2\:text-green-900 :is(:where(h2):not(:where([class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: rgb(20 83 45 / var(--tw-text-opacity));
+}
+
+.prose-h2\:text-green-800 :is(:where(h2):not(:where([class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {

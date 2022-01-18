@@ -57,7 +57,7 @@ function Resume() {
   return (
     <div className="relative w-full px-6 py-12 bg-white shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
       <div className="mx-auto max-w-prose lg:text-lg">
-        <div className="mx-auto mt-8 prose prose-slate lg:prose-lg">
+        <div className="mx-auto mt-8 prose prose-slate prose-h2:text-green-700 lg:prose-lg">
           <div className="flex items-center justify-between">
             <h1 className="m-0">Alex Sinfarosa</h1>
             <img
@@ -73,7 +73,7 @@ function Resume() {
               <a
                 key={link.name}
                 href={link.to}
-                className="relative inline-flex items-center px-4 py-2 m-1 text-sm font-medium no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 <link.icon className="w-5 h-5 mr-2" aria-hidden="true" />
                 <span>{link.name}</span>
@@ -96,7 +96,7 @@ function Resume() {
           {/* First */}
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
             <span className="col-span-1 text-lg font-medium text-gray-500">
-              2017 - CURRENT
+              2017 - ONGOING
             </span>
 
             <div className="col-span-3">
@@ -237,18 +237,18 @@ function Resume() {
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
             <span className="col-span-1 text-lg font-medium text-gray-500"></span>
             <div className="grid grid-cols-3 col-span-3 gap-4 sm:grid-cols-4">
-              <em className="">HTML</em>
-              <em className="">CSS</em>
-              <em className="">Javascript</em>
-              <em className="">React</em>
-              <em className="">Tailwind</em>
-              <em className="">Gatsby</em>
-              <em className="">Remix</em>
-              <em className="">Cloudflare</em>
-              <em className="">GraphQL</em>
-              <em className="">D3.js</em>
-              <em className="">Python</em>
-              <em className="">Node.js</em>
+              <em className="font-medium tracking-wide">HTML</em>
+              <em className="font-medium tracking-wide">CSS</em>
+              <em className="font-medium tracking-wide">Javascript</em>
+              <em className="font-medium tracking-wide">React</em>
+              <em className="font-medium tracking-wide">Tailwind</em>
+              <em className="font-medium tracking-wide">Gatsby</em>
+              <em className="font-medium tracking-wide">Remix</em>
+              <em className="font-medium tracking-wide">Cloudflare</em>
+              <em className="font-medium tracking-wide">GraphQL</em>
+              <em className="font-medium tracking-wide">D3.js</em>
+              <em className="font-medium tracking-wide">Python</em>
+              <em className="font-medium tracking-wide">Node.js</em>
             </div>
           </section>
 
