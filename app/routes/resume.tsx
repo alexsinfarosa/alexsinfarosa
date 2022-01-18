@@ -89,7 +89,7 @@ function Resume() {
           </p>
 
           <h2 className="inline-flex items-center" id="experience">
-            <BriefcaseIcon className="mb-1 mr-2 w-7 h-7" aria-hidden="true" />
+            <BriefcaseIcon className="mb-1 mr-1 w-7 h-7" aria-hidden="true" />
             Experience
           </h2>
 
@@ -196,7 +196,7 @@ function Resume() {
           </section>
 
           <h2 className="inline-flex items-center" id="education">
-            <AcademicCapIcon className="mb-1 mr-2 w-7 h-7" aria-hidden="true" />
+            <AcademicCapIcon className="mr-1 w-7 h-7" aria-hidden="true" />
             Education
           </h2>
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
@@ -231,7 +231,7 @@ function Resume() {
           </section>
 
           <h2 className="inline-flex items-center">
-            <BadgeCheckIcon className="mb-1 mr-2 w-7 h-7" aria-hidden="true" />
+            <BadgeCheckIcon className="mr-1 w-7 h-7" aria-hidden="true" />
             Skills
           </h2>
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
@@ -253,7 +253,7 @@ function Resume() {
           </section>
 
           <h2 className="inline-flex items-center">
-            <StarIcon className="mb-1 mr-2 w-7 h-7" aria-hidden="true" />
+            <StarIcon className="w-7 h-7" aria-hidden="true" />
             Awards
           </h2>
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
@@ -296,7 +296,7 @@ function Resume() {
 
           <h2 className="inline-flex items-center">
             <InformationCircleIcon
-              className="mb-1 mr-2 w-7 h-7"
+              className="mr-1 w-7 h-7"
               aria-hidden="true"
             />
             Others
