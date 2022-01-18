@@ -81,7 +81,7 @@ function Resume() {
             ))}
           </div>
 
-          <h2>Summary</h2>
+          <h2 id="summary">Summary</h2>
           <p className="lead">
             Senior Front-end Engineer with 5+ years of experience designing,
             developing, and managing complex web/mobile applications.
@@ -95,7 +95,7 @@ function Resume() {
 
           {/* First */}
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 text-lg font-medium text-gray-500">
+            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0 ">
               2017 - ONGOING
             </span>
 
@@ -153,7 +153,7 @@ function Resume() {
 
           {/* Second */}
           <section className="grid gap-4 mt-8 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 text-lg font-medium text-gray-500">
+            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
               SUMMER '16
             </span>
 
@@ -200,7 +200,7 @@ function Resume() {
             Education
           </h2>
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 text-lg font-medium text-gray-500">
+            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
               2012 - 2016
             </span>
 
@@ -252,12 +252,12 @@ function Resume() {
             </div>
           </section>
 
-          <h2 className="inline-flex items-center">
+          <h2 className="inline-flex items-center" id="awards">
             <StarIcon className="w-7 h-7" aria-hidden="true" />
             Awards
           </h2>
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 text-lg font-medium text-gray-500">
+            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
               2018
             </span>
 
@@ -294,7 +294,7 @@ function Resume() {
             </div>
           </section>
 
-          <h2 className="inline-flex items-center">
+          <h2 className="inline-flex items-center" id="others">
             <InformationCircleIcon
               className="mr-1 w-7 h-7"
               aria-hidden="true"
@@ -302,7 +302,7 @@ function Resume() {
             Others
           </h2>
           <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 text-lg font-medium text-gray-500">
+            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
               2006 - 2011
             </span>
 
@@ -330,7 +330,7 @@ function Resume() {
           </section>
 
           <section className="grid gap-4 mt-8 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 text-lg font-medium text-gray-500">
+            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
               1993 - 2003
             </span>
 
