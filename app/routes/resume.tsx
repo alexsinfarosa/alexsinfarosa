@@ -62,7 +62,7 @@ function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
         className="absolute inset-0 items-center hidden sm:flex"
         aria-hidden="true"
       >
-        <div className="w-full border-t border-gray-300" />
+        <div className="w-full border-t border-gray-200" />
       </div>
       <div className="relative flex justify-start">
         <span className="inline-flex items-center pr-3 text-xl font-semibold text-gray-900 bg-white lg:text-2xl">
@@ -322,9 +322,9 @@ function Resume() {
                 <p>
                   Sponsored by the City of Syracuse, Syracuse University, and
                   AT&T, the hackathon presented participants with the city's GPS
-                  data from their snowplows, and challenged them to come up with
-                  a data related project which could help the city with their
-                  snow removal efforts.
+                  data from their snowplows, and challenged us to come up with a
+                  data related project which could help the city with their snow
+                  removal efforts.
                 </p>
               </div>
             </section>
@@ -381,7 +381,7 @@ function Resume() {
                       className="-ml-0.5 mr-1 h-4 w-4"
                       aria-hidden="true"
                     />
-                    Florence, IT
+                    Italy
                   </div>
                 </div>
                 <p className="flex">
