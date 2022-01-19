@@ -5,8 +5,10 @@ import {
   InformationCircleIcon,
   LocationMarkerIcon,
   MailIcon,
+  MusicNoteIcon,
   StarIcon,
 } from '@heroicons/react/solid'
+import pattern from '../../public/images/pattern.svg'
 import profilePicture from '../../public/images/profile_picture.jpg'
 
 const GithubIcon = (prop: any) => (
@@ -55,301 +57,310 @@ const links = [
 
 function Resume() {
   return (
-    <div className="relative w-full px-6 py-12 bg-white shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
-      <div className="mx-auto max-w-prose lg:text-lg">
-        <div className="mx-auto mt-8 prose prose-slate prose-h2:text-green-700 lg:prose-lg">
-          <div className="flex items-center justify-between">
-            <h1 className="m-0">Alex Sinfarosa</h1>
-            <img
-              className="inline-block w-32 h-32 p-0 m-0 rounded-full sm:w-36 sm:h-36 "
-              src={profilePicture}
-              alt="Alex profile picture"
-            />
+    <div className="relative flex flex-col justify-center min-h-screen py-8 overflow-hidden bg-slate-50 lg:py-12">
+      <div
+        className={`absolute inset-0 bg-[url(${pattern})] bg-top [mask-image:linear-gradient(180deg,red,rgba(255,255,255,0))]`}
+      ></div>
+
+      <div className="relative w-full px-6 py-12 bg-white shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
+        <div className="mx-auto max-w-prose lg:text-lg">
+          <div className="mx-auto mt-8 prose prose-slate prose-h2:text-green-700 lg:prose-lg">
+            <div className="flex items-center justify-between">
+              <h1 className="m-0">Alex Sinfarosa</h1>
+              <img
+                className="inline-block w-32 h-32 p-0 m-0 rounded-full sm:w-36 sm:h-36 "
+                src={profilePicture}
+                alt="Alex profile picture"
+              />
+            </div>
+            <h2 className="text-center">Front-End Engineer</h2>
+
+            <div className="flex flex-col py-1 sm:flex-row justify-evenly">
+              {links.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.to}
+                  className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  <link.icon className="w-5 h-5 mr-2" aria-hidden="true" />
+                  <span>{link.name}</span>
+                </a>
+              ))}
+            </div>
+
+            <h3 id="summary">Summary</h3>
+            <p className="lead">
+              Senior Front-end Engineer with 5+ years of experience designing,
+              developing, and managing complex web/mobile applications.
+              Participated in projects in all stages of the product life cycle.
+            </p>
+
+            <h3 className="inline-flex items-center" id="experience">
+              <BriefcaseIcon className="mb-1 mr-1 w-7 h-7" aria-hidden="true" />
+              Experience
+            </h3>
+
+            {/* First */}
+            <section className="grid gap-4 sm:grid-cols-4">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+                2017 - ONGOING
+              </span>
+
+              <div className="col-span-3 sm:text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-semibold text-black">
+                    Senior Front End Developer
+                  </span>
+                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                    <LocationMarkerIcon
+                      className="-ml-0.5 mr-1 h-4 w-4"
+                      aria-hidden="true"
+                    />
+                    Remote
+                  </div>
+                </div>
+                <span className="font-medium text-gray-500">
+                  <a
+                    href="https://www.nrcc.cornell.edu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <em>NRCC - Cornell University</em>
+                  </a>
+                </span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+                  voluptate consectetur quae incidunt alias enim odio doloribus
+                  sunt
+                </p>
+                <ul>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, dolores.
+                  </li>
+                  <li>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Similique doloribus hic neque.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Veritatis eligendi doloribus dolorem nisi nam.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A,
+                    enim officia?
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam excepturi dolore, labore quod facere maiores hic.
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Second */}
+            <section className="grid gap-4 mt-8 sm:grid-cols-4">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+                SUMMER '16
+              </span>
+
+              <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-semibold text-black">
+                    Data Science Intern
+                  </span>
+                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                    <LocationMarkerIcon
+                      className="-ml-0.5 mr-1 h-4 w-4"
+                      aria-hidden="true"
+                    />
+                    NY, NY
+                  </div>
+                </div>
+                <span className="font-medium text-gray-700">
+                  <em>Berkshire Hathaway Real Estate, NY</em>
+                </span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+                  voluptate consectetur quae incidunt alias enim odio doloribus
+                  sunt
+                </p>
+                <ul>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis, dolores.
+                  </li>
+                  <li>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Similique doloribus hic neque.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Veritatis eligendi doloribus dolorem nisi nam.
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <h3 className="inline-flex items-center" id="education">
+              <AcademicCapIcon className="mr-1 w-7 h-7" aria-hidden="true" />
+              Education
+            </h3>
+            <section className="grid gap-4 sm:grid-cols-4">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+                2012 - 2016
+              </span>
+
+              <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-semibold text-black">
+                    Bachelor of Science (B.Sc.), Data Science
+                  </span>
+                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                    <LocationMarkerIcon
+                      className="-ml-0.5 mr-1 h-4 w-4"
+                      aria-hidden="true"
+                    />
+                    Ithaca, NY
+                  </div>
+                </div>
+                <span className="font-medium text-gray-700">
+                  <a
+                    href="https://www.engineering.cornell.edu/data-science"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <em>Cornell University</em>
+                  </a>
+                </span>
+                <p></p>
+              </div>
+            </section>
+
+            <h3 className="inline-flex items-center">
+              <BadgeCheckIcon className="mr-1 w-7 h-7" aria-hidden="true" />
+              Skills
+            </h3>
+            <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
+              <span className="col-span-1 text-lg font-medium text-gray-500"></span>
+              <div className="grid grid-cols-3 col-span-3 gap-4 sm:grid-cols-4">
+                <em className="font-medium tracking-wide">HTML</em>
+                <em className="font-medium tracking-wide">CSS</em>
+                <em className="font-medium tracking-wide">Javascript</em>
+                <em className="font-medium tracking-wide">React</em>
+                <em className="font-medium tracking-wide">Tailwind</em>
+                <em className="font-medium tracking-wide">Gatsby</em>
+                <em className="font-medium tracking-wide">Remix</em>
+                <em className="font-medium tracking-wide">Cloudflare</em>
+                <em className="font-medium tracking-wide">GraphQL</em>
+                <em className="font-medium tracking-wide">D3.js</em>
+                <em className="font-medium tracking-wide">Python</em>
+                <em className="font-medium tracking-wide">Node.js</em>
+              </div>
+            </section>
+
+            <h3 className="inline-flex items-center" id="awards">
+              <StarIcon className="w-7 h-7" aria-hidden="true" />
+              Awards
+            </h3>
+            <section className="grid gap-4 sm:grid-cols-4">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+                2018
+              </span>
+
+              <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-semibold text-black">
+                    <span className="ordinal">1st</span> Place in the City of
+                    Syracuse's "Plowing Through the Data" civic hackathon.
+                  </span>
+                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                    <LocationMarkerIcon
+                      className="-ml-0.5 mr-1 h-4 w-4"
+                      aria-hidden="true"
+                    />
+                    Remote
+                  </div>
+                </div>
+                <span className="font-medium text-gray-700">
+                  <a
+                    href="https://www.nrcc.cornell.edu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <em>civic-Hackathon-Plowing-Through-Data</em>
+                  </a>
+                </span>
+                <p>
+                  Sponsored by the City of Syracuse, Syracuse University, and
+                  AT&T, the hackathon presented participants with the city's GPS
+                  data from their snowplows, and challenged them to come up with
+                  a data related project which could help the city with their
+                  snow removal efforts.
+                </p>
+              </div>
+            </section>
+
+            <h3 className="inline-flex items-center" id="others">
+              <InformationCircleIcon
+                className="mr-1 w-7 h-7"
+                aria-hidden="true"
+              />
+              Others
+            </h3>
+            <section className="grid gap-4 sm:grid-cols-4">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+                2006 - 2011
+              </span>
+
+              <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-semibold text-black">
+                    Restaurant Manager
+                  </span>
+                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                    <LocationMarkerIcon
+                      className="-ml-0.5 mr-1 h-4 w-4"
+                      aria-hidden="true"
+                    />
+                    NY, NY
+                  </div>
+                </div>
+                <p>
+                  Restaurant Manager with 5+ years of experience managing a
+                  high-quality and fast-paced restaurants. Ability to train
+                  staff to the highest standards of customer service, ensuring
+                  increased customer satisfaction, reduced staff turnover rates,
+                  and a 92% rise in sales through upselling techniques.
+                </p>
+              </div>
+            </section>
+
+            <section className="grid gap-4 mt-8 sm:grid-cols-4">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+                1993 - 2003
+              </span>
+
+              <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-semibold text-black">
+                    Florence Conservatory of Music
+                  </span>
+                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                    <LocationMarkerIcon
+                      className="-ml-0.5 mr-1 h-4 w-4"
+                      aria-hidden="true"
+                    />
+                    Florence, IT
+                  </div>
+                </div>
+                <p className="flex">
+                  Master's Degree in pianoforte.{' '}
+                  <MusicNoteIcon className="w-4 ml-1 h2" />
+                </p>
+              </div>
+            </section>
           </div>
-          <h2 className="text-center">Front-End Engineer</h2>
-
-          <div className="flex flex-col py-1 sm:flex-row justify-evenly">
-            {links.map((link) => (
-              <a
-                key={link.name}
-                href={link.to}
-                className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                <link.icon className="w-5 h-5 mr-2" aria-hidden="true" />
-                <span>{link.name}</span>
-              </a>
-            ))}
-          </div>
-
-          <h2 id="summary">Summary</h2>
-          <p className="lead">
-            Senior Front-end Engineer with 5+ years of experience designing,
-            developing, and managing complex web/mobile applications.
-            Participated in projects in all stages of the product life cycle.
-          </p>
-
-          <h2 className="inline-flex items-center" id="experience">
-            <BriefcaseIcon className="mb-1 mr-1 w-7 h-7" aria-hidden="true" />
-            Experience
-          </h2>
-
-          {/* First */}
-          <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0 ">
-              2017 - ONGOING
-            </span>
-
-            <div className="col-span-3">
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold text-black">
-                  Senior Front End Developer
-                </span>
-                <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
-                  <LocationMarkerIcon
-                    className="-ml-0.5 mr-1 h-4 w-4"
-                    aria-hidden="true"
-                  />
-                  Remote
-                </div>
-              </div>
-              <span className="font-medium text-gray-500">
-                <a
-                  href="https://www.nrcc.cornell.edu/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <em>NRCC - Cornell University</em>
-                </a>
-              </span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                voluptate consectetur quae incidunt alias enim odio doloribus
-                sunt
-              </p>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis, dolores.
-                </li>
-                <li>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Similique doloribus hic neque.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Veritatis eligendi doloribus dolorem nisi nam.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A,
-                  enim officia?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Magnam excepturi dolore, labore quod facere maiores hic.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Second */}
-          <section className="grid gap-4 mt-8 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
-              SUMMER '16
-            </span>
-
-            <div className="col-span-3 mt-1 sm:mt-0">
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold text-black">
-                  Data Science Intern
-                </span>
-                <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
-                  <LocationMarkerIcon
-                    className="-ml-0.5 mr-1 h-4 w-4"
-                    aria-hidden="true"
-                  />
-                  NY, NY
-                </div>
-              </div>
-              <span className="font-medium text-gray-700">
-                <em>Berkshire Hathaway Real Estate, NY</em>
-              </span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                voluptate consectetur quae incidunt alias enim odio doloribus
-                sunt
-              </p>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Blanditiis, dolores.
-                </li>
-                <li>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Similique doloribus hic neque.
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Veritatis eligendi doloribus dolorem nisi nam.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <h2 className="inline-flex items-center" id="education">
-            <AcademicCapIcon className="mr-1 w-7 h-7" aria-hidden="true" />
-            Education
-          </h2>
-          <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
-              2012 - 2016
-            </span>
-
-            <div className="col-span-3 mt-1 sm:mt-0">
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold text-black">
-                  Bachelor of Science (B.Sc.), Data Science
-                </span>
-                <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
-                  <LocationMarkerIcon
-                    className="-ml-0.5 mr-1 h-4 w-4"
-                    aria-hidden="true"
-                  />
-                  Ithaca, NY
-                </div>
-              </div>
-              <span className="font-medium text-gray-700">
-                <a
-                  href="https://www.engineering.cornell.edu/data-science"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <em>Cornell University</em>
-                </a>
-              </span>
-              <p></p>
-            </div>
-          </section>
-
-          <h2 className="inline-flex items-center">
-            <BadgeCheckIcon className="mr-1 w-7 h-7" aria-hidden="true" />
-            Skills
-          </h2>
-          <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 text-lg font-medium text-gray-500"></span>
-            <div className="grid grid-cols-3 col-span-3 gap-4 sm:grid-cols-4">
-              <em className="font-medium tracking-wide">HTML</em>
-              <em className="font-medium tracking-wide">CSS</em>
-              <em className="font-medium tracking-wide">Javascript</em>
-              <em className="font-medium tracking-wide">React</em>
-              <em className="font-medium tracking-wide">Tailwind</em>
-              <em className="font-medium tracking-wide">Gatsby</em>
-              <em className="font-medium tracking-wide">Remix</em>
-              <em className="font-medium tracking-wide">Cloudflare</em>
-              <em className="font-medium tracking-wide">GraphQL</em>
-              <em className="font-medium tracking-wide">D3.js</em>
-              <em className="font-medium tracking-wide">Python</em>
-              <em className="font-medium tracking-wide">Node.js</em>
-            </div>
-          </section>
-
-          <h2 className="inline-flex items-center" id="awards">
-            <StarIcon className="w-7 h-7" aria-hidden="true" />
-            Awards
-          </h2>
-          <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
-              2018
-            </span>
-
-            <div className="col-span-3 mt-1 sm:mt-0">
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold text-black">
-                  <span className="ordinal">1st</span> Place in the City of
-                  Syracuse's "Plowing Through the Data" civic hackathon.
-                </span>
-                <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
-                  <LocationMarkerIcon
-                    className="-ml-0.5 mr-1 h-4 w-4"
-                    aria-hidden="true"
-                  />
-                  Remote
-                </div>
-              </div>
-              <span className="font-medium text-gray-700">
-                <a
-                  href="https://www.nrcc.cornell.edu/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <em>civic-Hackathon-Plowing-Through-Data</em>
-                </a>
-              </span>
-              <p>
-                Sponsored by the City of Syracuse, Syracuse University, and
-                AT&T, the hackathon presented participants with the city's GPS
-                data from their snowplows, and challenged them to come up with a
-                data related project which could help the city with their snow
-                removal efforts.
-              </p>
-            </div>
-          </section>
-
-          <h2 className="inline-flex items-center" id="others">
-            <InformationCircleIcon
-              className="mr-1 w-7 h-7"
-              aria-hidden="true"
-            />
-            Others
-          </h2>
-          <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
-              2006 - 2011
-            </span>
-
-            <div className="col-span-3 mt-1 sm:mt-0">
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold text-black">
-                  Restaurant Manager
-                </span>
-                <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
-                  <LocationMarkerIcon
-                    className="-ml-0.5 mr-1 h-4 w-4"
-                    aria-hidden="true"
-                  />
-                  NY, NY
-                </div>
-              </div>
-              <p>
-                Restaurant Manager with 5+ years of experience managing a
-                high-quality and fast-paced restaurants. Ability to train staff
-                to the highest standards of customer service, ensuring increased
-                customer satisfaction, reduced staff turnover rates, and a 92%
-                rise in sales through upselling techniques.
-              </p>
-            </div>
-          </section>
-
-          <section className="grid gap-4 mt-8 sm:text-sm sm:grid-cols-4">
-            <span className="col-span-1 -mb-3 text-lg font-medium text-gray-500 sm:mb-0">
-              1993 - 2003
-            </span>
-
-            <div className="col-span-3 mt-1 sm:mt-0">
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold text-black">
-                  Florence Conservatory of Music
-                </span>
-                <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
-                  <LocationMarkerIcon
-                    className="-ml-0.5 mr-1 h-4 w-4"
-                    aria-hidden="true"
-                  />
-                  Florence, IT
-                </div>
-              </div>
-              <p>Master's Degree in pianoforte</p>
-            </div>
-          </section>
         </div>
       </div>
     </div>
