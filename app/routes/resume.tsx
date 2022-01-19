@@ -73,7 +73,7 @@ function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
     </h3>
   )
 }
-
+console.log(pattern)
 function Resume() {
   return (
     <div className="relative flex flex-col justify-center min-h-screen py-8 overflow-hidden bg-slate-50 lg:py-12">
@@ -81,9 +81,9 @@ function Resume() {
         className={`absolute inset-0 bg-[url(${pattern})] bg-top [mask-image:linear-gradient(180deg,red,rgba(255,255,255,0))]`}
       ></div>
 
-      <div className="relative w-full px-6 py-12 bg-white shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
+      <div className="relative w-full px-6 py-12 bg-white rounded-md shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
         <div className="mx-auto max-w-prose lg:text-lg">
-          <div className="mx-auto mt-8 prose prose-slate prose-h2:text-green-700 lg:prose-lg">
+          <div className="mx-auto mt-8 prose prose-slate prose-h2:text-blue-500 lg:prose-lg">
             <div className="flex items-center justify-between">
               <h1 className="m-0">Alex Sinfarosa</h1>
               <img
@@ -92,14 +92,14 @@ function Resume() {
                 alt="Alex profile picture"
               />
             </div>
-            <h2 className="text-center">Front-End Engineer</h2>
+            <h2 className="font-extrabold text-center">Front-End Engineer</h2>
 
             <div className="flex flex-col py-1 sm:flex-row justify-evenly">
               {links.map((link) => (
                 <a
                   key={link.name}
                   href={link.to}
-                  className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium tracking-wide text-white no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gradient-to-r from-cyan-500 to-blue-500"
                 >
                   <link.icon className="w-5 h-5 mr-2" aria-hidden="true" />
                   <span>{link.name}</span>
@@ -384,9 +384,9 @@ function Resume() {
                     Italy
                   </div>
                 </div>
-                <p className="flex">
+                <p className="flex items-center">
                   Master's Degree in pianoforte.{' '}
-                  <MusicNoteIcon className="w-4 ml-1 h2" />
+                  <MusicNoteIcon className="w-4 h-4 ml-1" />
                 </p>
               </div>
             </section>
