@@ -55,6 +55,22 @@ const links = [
   },
 ]
 
+function H3({ text, icon }: { text: string; icon: any }) {
+  return (
+    <h3 className="relative" id={text.toLowerCase()}>
+      <div className="absolute inset-0 flex items-center" aria-hidden="true">
+        <div className="w-full border-t border-gray-300" />
+      </div>
+      <div className="relative flex justify-start">
+        <span className="inline-flex items-center pr-3 text-xl font-semibold text-gray-900 bg-white lg:text-2xl">
+          {icon}
+          {text}
+        </span>
+      </div>
+    </h3>
+  )
+}
+
 function Resume() {
   return (
     <div className="relative flex flex-col justify-center min-h-screen py-8 overflow-hidden bg-slate-50 lg:py-12">
@@ -95,10 +111,15 @@ function Resume() {
               Participated in projects in all stages of the product life cycle.
             </p>
 
-            <h3 className="inline-flex items-center" id="experience">
-              <BriefcaseIcon className="mb-1 mr-1 w-7 h-7" aria-hidden="true" />
-              Experience
-            </h3>
+            <H3
+              text="Experience"
+              icon={
+                <BriefcaseIcon
+                  className="mb-1 mr-1 w-7 h-7"
+                  aria-hidden="true"
+                ></BriefcaseIcon>
+              }
+            ></H3>
 
             {/* First */}
             <section className="grid gap-4 sm:grid-cols-4">
@@ -202,10 +223,12 @@ function Resume() {
               </div>
             </section>
 
-            <h3 className="inline-flex items-center" id="education">
-              <AcademicCapIcon className="mr-1 w-7 h-7" aria-hidden="true" />
-              Education
-            </h3>
+            <H3
+              text="Education"
+              icon={
+                <AcademicCapIcon className="mr-1 w-7 h-7" aria-hidden="true" />
+              }
+            ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
               <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 2012 - 2016
@@ -237,10 +260,12 @@ function Resume() {
               </div>
             </section>
 
-            <h3 className="inline-flex items-center">
-              <BadgeCheckIcon className="mr-1 w-7 h-7" aria-hidden="true" />
-              Skills
-            </h3>
+            <H3
+              text="Skills"
+              icon={
+                <BadgeCheckIcon className="mr-1 w-7 h-7" aria-hidden="true" />
+              }
+            ></H3>
             <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
               <span className="col-span-1 text-lg font-medium text-gray-500"></span>
               <div className="grid grid-cols-3 col-span-3 gap-4 sm:grid-cols-4">
@@ -259,10 +284,10 @@ function Resume() {
               </div>
             </section>
 
-            <h3 className="inline-flex items-center" id="awards">
-              <StarIcon className="w-7 h-7" aria-hidden="true" />
-              Awards
-            </h3>
+            <H3
+              text="Awards"
+              icon={<StarIcon className="w-7 h-7" aria-hidden="true" />}
+            ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
               <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 2018
@@ -301,13 +326,15 @@ function Resume() {
               </div>
             </section>
 
-            <h3 className="inline-flex items-center" id="others">
-              <InformationCircleIcon
-                className="mr-1 w-7 h-7"
-                aria-hidden="true"
-              />
-              Others
-            </h3>
+            <H3
+              text="Others"
+              icon={
+                <InformationCircleIcon
+                  className="mr-1 w-7 h-7"
+                  aria-hidden="true"
+                />
+              }
+            ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
               <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 2006 - 2011
