@@ -55,10 +55,13 @@ const links = [
   },
 ]
 
-function H3({ text, icon }: { text: string; icon: any }) {
+function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
   return (
     <h3 className="relative" id={text.toLowerCase()}>
-      <div className="absolute inset-0 flex items-center" aria-hidden="true">
+      <div
+        className="absolute inset-0 items-center hidden sm:flex"
+        aria-hidden="true"
+      >
         <div className="w-full border-t border-gray-300" />
       </div>
       <div className="relative flex justify-start">
