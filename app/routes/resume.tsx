@@ -5,7 +5,6 @@ import {
   InformationCircleIcon,
   LocationMarkerIcon,
   MailIcon,
-  MusicNoteIcon,
   StarIcon,
 } from '@heroicons/react/solid'
 import pattern from '../../public/images/pattern.svg'
@@ -99,7 +98,7 @@ function Resume() {
                 <a
                   key={link.name}
                   href={link.to}
-                  className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium tracking-wide text-white no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500"
+                  className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium tracking-wide text-white no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:shadow-xl"
                 >
                   <link.icon className="w-5 h-5 mr-2" aria-hidden="true" />
                   <span>{link.name}</span>
@@ -385,7 +384,7 @@ function Resume() {
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
-                    Florence Conservatory of Music
+                    Conservatory of Music
                   </span>
                   <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
                     <LocationMarkerIcon
@@ -395,9 +394,9 @@ function Resume() {
                     Italy
                   </div>
                 </div>
-                <p className="flex items-center">
-                  Master's Degree in pianoforte.{' '}
-                  <MusicNoteIcon className="w-4 h-4 ml-1 text-gray-600" />
+                <p>
+                  Studied classical piano since young age. Received master's
+                  degree in pianoforte at the Conservatory of La Spezia (Italy).
                 </p>
               </div>
             </section>
