@@ -65,7 +65,7 @@ function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
         <div className="w-full border-t border-gray-200" />
       </div>
       <div className="relative flex justify-start">
-        <span className="inline-flex items-center pr-3 text-xl font-semibold text-gray-900 bg-white lg:text-2xl">
+        <span className="inline-flex items-center pr-3 text-xl font-normal text-gray-600 bg-white lg:text-2xl">
           {icon}
           {text}
         </span>
@@ -99,7 +99,7 @@ function Resume() {
                 <a
                   key={link.name}
                   href={link.to}
-                  className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium tracking-wide text-white no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gradient-to-r from-cyan-500 to-blue-500"
+                  className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium tracking-wide text-white no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500"
                 >
                   <link.icon className="w-5 h-5 mr-2" aria-hidden="true" />
                   <span>{link.name}</span>
@@ -118,7 +118,7 @@ function Resume() {
               text="Experience"
               icon={
                 <BriefcaseIcon
-                  className="mb-1 mr-1 w-7 h-7"
+                  className="w-6 h-6 mb-1 mr-1 text-gray-600"
                   aria-hidden="true"
                 ></BriefcaseIcon>
               }
@@ -126,7 +126,7 @@ function Resume() {
 
             {/* First */}
             <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
                 2017 - ONGOING
               </span>
 
@@ -184,7 +184,7 @@ function Resume() {
 
             {/* Second */}
             <section className="grid gap-4 mt-8 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
                 SUMMER '16
               </span>
 
@@ -201,7 +201,7 @@ function Resume() {
                     NY, NY
                   </div>
                 </div>
-                <span className="font-medium text-gray-700">
+                <span className="font-medium text-gray-600">
                   <em>Berkshire Hathaway Real Estate, NY</em>
                 </span>
                 <p>
@@ -229,11 +229,14 @@ function Resume() {
             <H3
               text="Education"
               icon={
-                <AcademicCapIcon className="mr-1 w-7 h-7" aria-hidden="true" />
+                <AcademicCapIcon
+                  className="w-6 h-6 mr-1 text-gray-600"
+                  aria-hidden="true"
+                />
               }
             ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
                 2012 - 2016
               </span>
 
@@ -266,7 +269,10 @@ function Resume() {
             <H3
               text="Skills"
               icon={
-                <BadgeCheckIcon className="mr-1 w-7 h-7" aria-hidden="true" />
+                <BadgeCheckIcon
+                  className="w-6 h-6 mb-0.5 mr-1 text-gray-600"
+                  aria-hidden="true"
+                />
               }
             ></H3>
             <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
@@ -289,10 +295,15 @@ function Resume() {
 
             <H3
               text="Awards"
-              icon={<StarIcon className="w-7 h-7" aria-hidden="true" />}
+              icon={
+                <StarIcon
+                  className="w-6 h-6 text-gray-600"
+                  aria-hidden="true"
+                />
+              }
             ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
                 2018
               </span>
 
@@ -333,13 +344,13 @@ function Resume() {
               text="Others"
               icon={
                 <InformationCircleIcon
-                  className="mr-1 w-7 h-7"
+                  className="w-6 h-6 mr-1 text-gray-600"
                   aria-hidden="true"
                 />
               }
             ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
                 2006 - 2011
               </span>
 
@@ -367,7 +378,7 @@ function Resume() {
             </section>
 
             <section className="grid gap-4 mt-8 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base">
+              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
                 1993 - 2003
               </span>
 
@@ -386,7 +397,7 @@ function Resume() {
                 </div>
                 <p className="flex items-center">
                   Master's Degree in pianoforte.{' '}
-                  <MusicNoteIcon className="w-4 h-4 ml-1" />
+                  <MusicNoteIcon className="w-4 h-4 ml-1 text-gray-600" />
                 </p>
               </div>
             </section>
