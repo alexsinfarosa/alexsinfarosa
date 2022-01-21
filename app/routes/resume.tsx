@@ -64,7 +64,7 @@ function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
         <div className="w-full border-t border-gray-200" />
       </div>
       <div className="relative flex justify-start">
-        <span className="inline-flex items-center pr-3 text-xl font-normal text-gray-600 bg-white lg:text-2xl">
+        <span className="inline-flex items-center pr-3 text-xl font-semibold text-gray-900 bg-white sm:font-normal sm:text-gray-600 lg:text-2xl">
           {icon}
           {text}
         </span>
