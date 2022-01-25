@@ -58,13 +58,13 @@ function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
   return (
     <h3 className="relative" id={text.toLowerCase()}>
       <div
-        className="absolute inset-0 items-center hidden sm:flex"
+        className="absolute inset-0 hidden items-center sm:flex"
         aria-hidden="true"
       >
         <div className="w-full border-t border-gray-200" />
       </div>
       <div className="relative flex justify-start">
-        <span className="inline-flex items-center pr-3 text-xl font-semibold text-gray-900 bg-white sm:font-normal sm:text-gray-600 lg:text-2xl">
+        <span className="inline-flex items-center bg-white pr-3 text-xl font-semibold text-gray-900 sm:font-normal sm:text-gray-600 lg:text-2xl">
           {icon}
           {text}
         </span>
@@ -75,32 +75,32 @@ function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
 console.log(pattern)
 function Resume() {
   return (
-    <div className="relative flex flex-col justify-center min-h-screen py-8 overflow-hidden bg-slate-50 lg:py-12">
+    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-slate-50 py-8 lg:py-12">
       <div
         className={`absolute inset-0 bg-[url(${pattern})] bg-top [mask-image:linear-gradient(180deg,red,rgba(255,255,255,0))]`}
       ></div>
 
-      <div className="relative w-full px-6 py-12 bg-white rounded-md shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
+      <div className="relative w-full rounded-md bg-white px-6 py-12 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:pt-16 lg:pb-28">
         <div className="mx-auto max-w-prose lg:text-lg">
-          <div className="mx-auto mt-8 prose prose-slate prose-h2:text-blue-500 lg:prose-lg">
+          <div className="prose prose-slate mx-auto mt-8 prose-h2:text-blue-500 lg:prose-lg">
             <div className="flex items-center justify-between">
               <h1 className="m-0">Alex Sinfarosa</h1>
               <img
-                className="inline-block w-32 h-32 p-0 m-0 rounded-full sm:w-36 sm:h-36 "
+                className="m-0 inline-block h-32 w-32 rounded-lg p-0 sm:h-36 sm:w-36 "
                 src={profilePicture}
                 alt="Alex profile picture"
               />
             </div>
-            <h2 className="font-extrabold text-center">Front-End Engineer</h2>
+            <h2 className="text-center font-extrabold">Front-End Engineer</h2>
 
-            <div className="flex flex-col py-1 sm:flex-row justify-evenly">
+            <div className="flex flex-col justify-evenly py-1 sm:flex-row">
               {links.map((link) => (
                 <a
                   key={link.name}
                   href={link.to}
-                  className="relative inline-flex items-center px-4 py-2 m-2 text-sm font-medium tracking-wide text-white no-underline rounded-md bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:shadow-xl"
+                  className="relative m-2 inline-flex items-center rounded-md bg-slate-50 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-sm font-medium tracking-wide text-white no-underline hover:bg-slate-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  <link.icon className="w-5 h-5 mr-2" aria-hidden="true" />
+                  <link.icon className="mr-2 h-5 w-5" aria-hidden="true" />
                   <span>{link.name}</span>
                 </a>
               ))}
@@ -117,7 +117,7 @@ function Resume() {
               text="Experience"
               icon={
                 <BriefcaseIcon
-                  className="w-6 h-6 mb-1 mr-1 text-gray-600"
+                  className="mb-1 mr-1 h-6 w-6 text-gray-600"
                   aria-hidden="true"
                 ></BriefcaseIcon>
               }
@@ -125,7 +125,7 @@ function Resume() {
 
             {/* First */}
             <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
+              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 2017 - ONGOING
               </span>
 
@@ -134,7 +134,7 @@ function Resume() {
                   <span className="text-lg font-semibold text-black">
                     Senior Front End Developer
                   </span>
-                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
                     <LocationMarkerIcon
                       className="-ml-0.5 mr-1 h-4 w-4"
                       aria-hidden="true"
@@ -152,9 +152,8 @@ function Resume() {
                   </a>
                 </span>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                  voluptate consectetur quae incidunt alias enim odio doloribus
-                  sunt
+                  Design and develop different web applications and internal
+                  tools.
                 </p>
                 <ul>
                   <li>
@@ -182,8 +181,8 @@ function Resume() {
             </section>
 
             {/* Second */}
-            <section className="grid gap-4 mt-8 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
+            <section className="mt-8 grid gap-4 sm:grid-cols-4">
+              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 SUMMER '16
               </span>
 
@@ -192,7 +191,7 @@ function Resume() {
                   <span className="text-lg font-semibold text-black">
                     Data Science Intern
                   </span>
-                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
                     <LocationMarkerIcon
                       className="-ml-0.5 mr-1 h-4 w-4"
                       aria-hidden="true"
@@ -204,18 +203,18 @@ function Resume() {
                   <em>Berkshire Hathaway Real Estate, NY</em>
                 </span>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                  voluptate consectetur quae incidunt alias enim odio doloribus
-                  sunt
+                  Worked with real estate brokerage firm in New York to conduct
+                  statistical analysis on active properties that helped buyers
+                  to navigate the housing market.
                 </p>
                 <ul>
                   <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Blanditiis, dolores.
+                    Understand problem statement and read relevant research
+                    papers.
                   </li>
                   <li>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Similique doloribus hic neque.
+                    Exploratory data analysis and presenting findings to the
+                    team.
                   </li>
                   <li>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -229,13 +228,13 @@ function Resume() {
               text="Education"
               icon={
                 <AcademicCapIcon
-                  className="w-6 h-6 mr-1 text-gray-600"
+                  className="mr-1 h-6 w-6 text-gray-600"
                   aria-hidden="true"
                 />
               }
             ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
+              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 2012 - 2016
               </span>
 
@@ -244,7 +243,7 @@ function Resume() {
                   <span className="text-lg font-semibold text-black">
                     Bachelor of Science (B.Sc.), Data Science
                   </span>
-                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
                     <LocationMarkerIcon
                       className="-ml-0.5 mr-1 h-4 w-4"
                       aria-hidden="true"
@@ -269,26 +268,30 @@ function Resume() {
               text="Skills"
               icon={
                 <BadgeCheckIcon
-                  className="w-6 h-6 mb-0.5 mr-1 text-gray-600"
+                  className="mb-0.5 mr-1 h-6 w-6 text-gray-600"
                   aria-hidden="true"
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:text-sm sm:grid-cols-4">
+            <section className="grid gap-4 sm:grid-cols-4 sm:text-sm">
               <span className="col-span-1 text-lg font-medium text-gray-500"></span>
-              <div className="grid grid-cols-3 col-span-3 gap-4 sm:grid-cols-4">
-                <em className="font-medium tracking-wide">HTML</em>
-                <em className="font-medium tracking-wide">CSS</em>
-                <em className="font-medium tracking-wide">Javascript</em>
-                <em className="font-medium tracking-wide">React</em>
-                <em className="font-medium tracking-wide">Tailwind</em>
-                <em className="font-medium tracking-wide">Gatsby</em>
-                <em className="font-medium tracking-wide">Remix</em>
-                <em className="font-medium tracking-wide">Cloudflare</em>
-                <em className="font-medium tracking-wide">GraphQL</em>
-                <em className="font-medium tracking-wide">D3.js</em>
-                <em className="font-medium tracking-wide">Python</em>
-                <em className="font-medium tracking-wide">Node.js</em>
+              <div className="col-span-3 grid grid-cols-3 gap-4 sm:grid-cols-4">
+                <em className="">HTML</em>
+                <em className="">CSS</em>
+                <em className="">JavaScript</em>
+                <em className="">TypeScript</em>
+                <em className="">React</em>
+                <em className="">Tailwind</em>
+                <em className="">Gatsby</em>
+                <em className="">Remix</em>
+                <em className="">Cloudflare</em>
+                <em className="">GraphQL</em>
+                <em className="">D3.js</em>
+                <em className="">Python</em>
+                <em className="">Node.js</em>
+                <em className="">Git/Version Control</em>
+                <em className="">RESTful services & APIs</em>
+                <em className="">UI/UX & Design</em>
               </div>
             </section>
 
@@ -296,13 +299,13 @@ function Resume() {
               text="Awards"
               icon={
                 <StarIcon
-                  className="w-6 h-6 text-gray-600"
+                  className="h-6 w-6 text-gray-600"
                   aria-hidden="true"
                 />
               }
             ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
+              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 2018
               </span>
 
@@ -312,7 +315,7 @@ function Resume() {
                     <span className="ordinal">1st</span> Place in the City of
                     Syracuse's "Plowing Through the Data" civic hackathon.
                   </span>
-                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
                     <LocationMarkerIcon
                       className="-ml-0.5 mr-1 h-4 w-4"
                       aria-hidden="true"
@@ -343,13 +346,13 @@ function Resume() {
               text="Others"
               icon={
                 <InformationCircleIcon
-                  className="w-6 h-6 mr-1 text-gray-600"
+                  className="mr-1 h-6 w-6 text-gray-600"
                   aria-hidden="true"
                 />
               }
             ></H3>
             <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
+              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 2006 - 2011
               </span>
 
@@ -358,7 +361,7 @@ function Resume() {
                   <span className="text-lg font-semibold text-black">
                     Restaurant Manager
                   </span>
-                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
                     <LocationMarkerIcon
                       className="-ml-0.5 mr-1 h-4 w-4"
                       aria-hidden="true"
@@ -370,14 +373,13 @@ function Resume() {
                   Restaurant Manager with 5+ years of experience managing a
                   high-quality and fast-paced restaurants. Ability to train
                   staff to the highest standards of customer service, ensuring
-                  increased customer satisfaction, reduced staff turnover rates,
-                  and a 92% rise in sales through upselling techniques.
+                  increased customer satisfaction.
                 </p>
               </div>
             </section>
 
-            <section className="grid gap-4 mt-8 sm:grid-cols-4">
-              <span className="col-span-1 font-medium text-gray-500 sm:pt-0.5 sm:text-base text-right">
+            <section className="mt-8 grid gap-4 sm:grid-cols-4">
+              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
                 1993 - 2003
               </span>
 
@@ -386,7 +388,7 @@ function Resume() {
                   <span className="text-lg font-semibold text-black">
                     Conservatory of Music
                   </span>
-                  <div className="items-center flex-shrink-0 hidden font-medium text-gray-500 sm:flex">
+                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
                     <LocationMarkerIcon
                       className="-ml-0.5 mr-1 h-4 w-4"
                       aria-hidden="true"
