@@ -7,8 +7,8 @@ import {
   MailIcon,
   StarIcon,
 } from '@heroicons/react/solid'
-import pattern from '../../public/images/pattern.svg'
-import profilePicture from '../../public/images/profile_picture.jpg'
+import pattern from '~/images/pattern.svg'
+import profilePicture from '~/images/profile_picture.jpg'
 
 const GithubIcon = (prop: any) => (
   <svg
