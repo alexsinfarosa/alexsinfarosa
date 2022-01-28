@@ -72,7 +72,19 @@ function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
     </h3>
   )
 }
-console.log(pattern)
+
+function TimeLocation({ time, location }: { time: string; location: string }) {
+  return (
+    <div className=" col-span-1 -mt-0.5 text-right font-medium text-gray-500">
+      <span className="sm:pt-0.5 sm:text-base">{time}</span>
+      <div className="hidden flex-shrink-0 items-center justify-end text-xs sm:flex">
+        <LocationMarkerIcon className="mr-1 h-4 w-4" aria-hidden="true" />
+        {location}
+      </div>
+    </div>
+  )
+}
+
 function Resume() {
   return (
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-slate-50 py-8 lg:py-12">
@@ -109,7 +121,7 @@ function Resume() {
             <h3 id="summary">Summary</h3>
             <p className="lead">
               Senior Front-end Engineer with 5+ years of experience designing,
-              developing, and managing complex web/mobile applications.
+              developing, testing and managing complex web/mobile applications.
               Participated in projects in all stages of the product life cycle.
             </p>
 
@@ -124,23 +136,17 @@ function Resume() {
             ></H3>
 
             {/* First */}
-            <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
-                2017 - ONGOING
-              </span>
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8">
+              <TimeLocation
+                time="2017 - ONGOING"
+                location="REMOTE"
+              ></TimeLocation>
 
               <div className="col-span-3 sm:text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
                     Senior Front End Developer
                   </span>
-                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
-                    <LocationMarkerIcon
-                      className="-ml-0.5 mr-1 h-4 w-4"
-                      aria-hidden="true"
-                    />
-                    Remote
-                  </div>
                 </div>
                 <span className="font-medium text-gray-500">
                   <a
@@ -181,23 +187,14 @@ function Resume() {
             </section>
 
             {/* Second */}
-            <section className="mt-8 grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
-                SUMMER '16
-              </span>
+            <section className="mt-8 grid gap-4 sm:grid-cols-4 sm:gap-8">
+              <TimeLocation time="Summer '16" location="NY, NY"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
                     Data Science Intern
                   </span>
-                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
-                    <LocationMarkerIcon
-                      className="-ml-0.5 mr-1 h-4 w-4"
-                      aria-hidden="true"
-                    />
-                    NY, NY
-                  </div>
                 </div>
                 <span className="font-medium text-gray-600">
                   <em>Berkshire Hathaway Real Estate, NY</em>
@@ -233,23 +230,17 @@ function Resume() {
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
-                2012 - 2016
-              </span>
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8">
+              <TimeLocation
+                time="2012 - 2016"
+                location="ITHACA, NY"
+              ></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
                     Bachelor of Science (B.Sc.), Data Science
                   </span>
-                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
-                    <LocationMarkerIcon
-                      className="-ml-0.5 mr-1 h-4 w-4"
-                      aria-hidden="true"
-                    />
-                    Ithaca, NY
-                  </div>
                 </div>
                 <span className="font-medium text-gray-700">
                   <a
@@ -273,7 +264,7 @@ function Resume() {
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:grid-cols-4 sm:text-sm">
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8 sm:text-sm">
               <span className="col-span-1 text-lg font-medium text-gray-500"></span>
               <div className="col-span-3 grid grid-cols-3 gap-4 sm:grid-cols-4">
                 <em className="">HTML</em>
@@ -304,10 +295,8 @@ function Resume() {
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
-                2018
-              </span>
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8">
+              <TimeLocation time="2018" location="REMOTE"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
                 <div className="flex items-center justify-between">
@@ -315,13 +304,6 @@ function Resume() {
                     <span className="ordinal">1st</span> Place in the City of
                     Syracuse's "Plowing Through the Data" civic hackathon.
                   </span>
-                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
-                    <LocationMarkerIcon
-                      className="-ml-0.5 mr-1 h-4 w-4"
-                      aria-hidden="true"
-                    />
-                    Remote
-                  </div>
                 </div>
                 <span className="font-medium text-gray-700">
                   <a
@@ -351,50 +333,32 @@ function Resume() {
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
-                2006 - 2011
-              </span>
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8">
+              <TimeLocation time="2006 - 2011" location="NY, NY"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
                     Restaurant Manager
                   </span>
-                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
-                    <LocationMarkerIcon
-                      className="-ml-0.5 mr-1 h-4 w-4"
-                      aria-hidden="true"
-                    />
-                    NY, NY
-                  </div>
                 </div>
                 <p>
                   Restaurant Manager with 5+ years of experience managing a
-                  high-quality and fast-paced restaurants. Ability to train
-                  staff to the highest standards of customer service, ensuring
-                  increased customer satisfaction.
+                  high-quality and fast-paced New York City restaurants. Ability
+                  to train staff to the highest standards of customer service,
+                  ensuring increased customer satisfaction.
                 </p>
               </div>
             </section>
 
-            <section className="mt-8 grid gap-4 sm:grid-cols-4">
-              <span className="col-span-1 text-right font-medium text-gray-500 sm:pt-0.5 sm:text-base">
-                1993 - 2003
-              </span>
+            <section className="mt-8 grid gap-4 sm:grid-cols-4 sm:gap-8">
+              <TimeLocation time="1993 - 2003" location="ITALY"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
                     Conservatory of Music
                   </span>
-                  <div className="hidden flex-shrink-0 items-center font-medium text-gray-500 sm:flex">
-                    <LocationMarkerIcon
-                      className="-ml-0.5 mr-1 h-4 w-4"
-                      aria-hidden="true"
-                    />
-                    Italy
-                  </div>
                 </div>
                 <p>
                   Studied classical piano since young age. Received master's
