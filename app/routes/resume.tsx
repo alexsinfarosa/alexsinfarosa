@@ -136,7 +136,7 @@ function Resume() {
             ></H3>
 
             {/* First */}
-            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8">
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-6">
               <TimeLocation
                 time="2017 - ONGOING"
                 location="REMOTE"
@@ -187,7 +187,7 @@ function Resume() {
             </section>
 
             {/* Second */}
-            <section className="mt-8 grid gap-4 sm:grid-cols-4 sm:gap-8">
+            <section className="mt-8 grid gap-4 sm:grid-cols-4 sm:gap-6">
               <TimeLocation time="Summer '16" location="NY, NY"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
@@ -230,7 +230,7 @@ function Resume() {
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8">
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-6">
               <TimeLocation
                 time="2012 - 2016"
                 location="ITHACA, NY"
@@ -264,7 +264,7 @@ function Resume() {
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8 sm:text-sm">
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-6 sm:text-sm">
               <span className="col-span-1 text-lg font-medium text-gray-500"></span>
               <div className="col-span-3 grid grid-cols-3 gap-4 sm:grid-cols-4">
                 <em className="">HTML</em>
@@ -295,7 +295,7 @@ function Resume() {
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8">
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-6">
               <TimeLocation time="2018" location="REMOTE"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
@@ -333,7 +333,7 @@ function Resume() {
                 />
               }
             ></H3>
-            <section className="grid gap-4 sm:grid-cols-4 sm:gap-8">
+            <section className="grid gap-4 sm:grid-cols-4 sm:gap-6">
               <TimeLocation time="2006 - 2011" location="NY, NY"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
@@ -351,7 +351,7 @@ function Resume() {
               </div>
             </section>
 
-            <section className="mt-8 grid gap-4 sm:grid-cols-4 sm:gap-8">
+            <section className="mt-8 grid gap-4 sm:grid-cols-4 sm:gap-6">
               <TimeLocation time="1993 - 2003" location="ITALY"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
