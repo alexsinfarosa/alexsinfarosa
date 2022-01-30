@@ -1161,6 +1161,10 @@ body {
   margin-bottom: 0px;
 }
 
+.-mt-16 {
+  margin-top: -4rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1300,6 +1304,16 @@ body {
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\$\{pattern\}\)\] {
   background-image: url(${pattern});
 }
@@ -1357,6 +1371,10 @@ body {
 
 .pr-3 {
   padding-right: 0.75rem;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .text-center {
@@ -1822,6 +1840,10 @@ body {
 
   .lg\:pb-28 {
     padding-bottom: 7rem;
+  }
+
+  .lg\:pb-20 {
+    padding-bottom: 5rem;
   }
 
   .lg\:text-2xl {

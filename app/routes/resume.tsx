@@ -23,18 +23,18 @@ const GithubIcon = (prop: any) => (
   </svg>
 )
 
-const TwitterIcon = (prop: any) => (
-  <svg
-    role="img"
-    viewBox="0 0 20 20"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="currentColor"
-    className={prop.className}
-  >
-    <title>Twitter</title>
-    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
-  </svg>
-)
+// const TwitterIcon = (prop: any) => (
+//   <svg
+//     role="img"
+//     viewBox="0 0 20 20"
+//     xmlns="http://www.w3.org/2000/svg"
+//     fill="currentColor"
+//     className={prop.className}
+//   >
+//     <title>Twitter</title>
+//     <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
+//   </svg>
+// )
 
 const links = [
   {
@@ -47,11 +47,11 @@ const links = [
     to: 'https://github.com/alexsinfarosa',
     icon: GithubIcon,
   },
-  {
-    name: '@alex_sinfarosa',
-    to: 'https://twitter.com/alex_sinfarosa',
-    icon: TwitterIcon,
-  },
+  // {
+  //   name: '@alex_sinfarosa',
+  //   to: 'https://twitter.com/alex_sinfarosa',
+  //   icon: TwitterIcon,
+  // },
 ]
 
 function H3({ text, icon }: { text: string; icon: React.ReactNode }) {
@@ -92,9 +92,9 @@ function Resume() {
         className={`absolute inset-0 bg-[url(${pattern})] bg-top [mask-image:linear-gradient(180deg,red,rgba(255,255,255,0))]`}
       ></div>
 
-      <div className="relative w-full rounded-md bg-white px-6 py-12 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:pt-16 lg:pb-28">
+      <div className="relative w-full rounded-md bg-white px-6 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:pb-20">
         <div className="mx-auto max-w-prose lg:text-lg">
-          <div className="prose prose-slate mx-auto mt-8 prose-h2:text-blue-500 lg:prose-lg">
+          <div className="prose prose-slate mx-auto prose-h2:text-blue-500 lg:prose-lg">
             <div className="flex items-center justify-between">
               <h1 className="m-0">Alex Sinfarosa</h1>
               <img
@@ -105,7 +105,7 @@ function Resume() {
             </div>
             <h2 className="text-center font-extrabold">Front-End Engineer</h2>
 
-            <div className="flex flex-col justify-evenly py-1 sm:flex-row">
+            <div className="flex flex-col justify-center py-1 sm:flex-row">
               {links.map((link) => (
                 <a
                   key={link.name}
@@ -145,7 +145,7 @@ function Resume() {
               <div className="col-span-3 sm:text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
-                    Senior Front End Developer
+                    Senior Front End Engineer
                   </span>
                 </div>
                 <span className="font-medium text-gray-500">
@@ -188,7 +188,7 @@ function Resume() {
 
             {/* Second */}
             <section className="mt-8 grid gap-4 sm:grid-cols-4 sm:gap-6">
-              <TimeLocation time="Summer '16" location="NY, NY"></TimeLocation>
+              <TimeLocation time="Summer 2016" location="NY, NY"></TimeLocation>
 
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
                 <div className="flex items-center justify-between">
@@ -272,14 +272,10 @@ function Resume() {
                 <em className="">JavaScript</em>
                 <em className="">TypeScript</em>
                 <em className="">React</em>
-                <em className="">Tailwind</em>
-                <em className="">Gatsby</em>
-                <em className="">Remix</em>
+                <em className="">Web APIs</em>
                 <em className="">Cloudflare</em>
                 <em className="">GraphQL</em>
                 <em className="">D3.js</em>
-                <em className="">Python</em>
-                <em className="">Node.js</em>
                 <em className="">Git/Version Control</em>
                 <em className="">RESTful services & APIs</em>
                 <em className="">UI/UX & Design</em>
@@ -302,7 +298,7 @@ function Resume() {
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
                     <span className="ordinal">1st</span> Place in the City of
-                    Syracuse's "Plowing Through the Data" civic hackathon.
+                    Syracuse's "Plowing Through the Data" Civic Hackathon.
                   </span>
                 </div>
                 <span className="font-medium text-gray-700">
@@ -311,7 +307,7 @@ function Resume() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <em>civic-Hackathon-Plowing-Through-Data</em>
+                    <em>civic-hackathon-plowing-through-data</em>
                   </a>
                 </span>
                 <p>
@@ -357,12 +353,12 @@ function Resume() {
               <div className="col-span-3 mt-1 sm:mt-0 sm:text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-black">
-                    Conservatory of Music
+                    Master Degree in Classical Piano
                   </span>
                 </div>
                 <p>
-                  Studied classical piano since young age. Received master's
-                  degree in pianoforte at the Conservatory of La Spezia (Italy).
+                  Studied classical piano since young age. Graduated from the
+                  Conservatory of La Spezia (Italy).
                 </p>
               </div>
             </section>
