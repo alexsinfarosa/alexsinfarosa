@@ -120,9 +120,11 @@ function Resume() {
 
             <h3 id="summary">Summary</h3>
             <p className="lead">
-              Senior Front-end Engineer with 5+ years of experience designing,
+              Front-end Engineer with 5+ years of experience designing,
               developing, testing and managing complex web/mobile applications.
               Participated in projects in all stages of the product life cycle.
+              Experience in driving projects forward as the development team
+              leader, facilitating projects from concept to launch
             </p>
 
             <H3
@@ -340,9 +342,7 @@ function Resume() {
                 </div>
                 <p>
                   Restaurant Manager with 5+ years of experience managing a
-                  high-quality and fast-paced New York City restaurants. Ability
-                  to train staff to the highest standards of customer service,
-                  ensuring increased customer satisfaction.
+                  high-quality and fast-paced New York City restaurants
                 </p>
               </div>
             </section>
