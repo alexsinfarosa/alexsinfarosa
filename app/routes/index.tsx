@@ -1,4 +1,11 @@
+import { LoaderFunction, useLoaderData } from 'remix'
+
+export const loader: LoaderFunction = ({ request, context }) => {
+  return { request, context }
+}
 export default function Index() {
+  const data = useLoaderData()
+  console.log(data)
   return (
     <div className="flex h-screen flex-col items-center justify-center">
       <h1 className="text-7xl font-semibold text-blue-600">Welcome!</h1>
