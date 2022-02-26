@@ -1,0 +1,12 @@
+name = "alexsinfarosa"
+type = "javascript"
+
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+kv_namespaces = [
+  {binding = "NEWA", id = "1d289899395f4a3c9769daef121782cd"},
+  { binding = "Ciccio_KV", id = "88127c24ae224f1f9734d8d427e8982f" }
+]

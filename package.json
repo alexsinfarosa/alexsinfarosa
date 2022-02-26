@@ -15,7 +15,7 @@
     "build:remix": "remix build",
     "dev": "cross-env NODE_ENV=development remix build && run-p dev:*",
     "dev:remix": "cross-env NODE_ENV=development remix watch",
-    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public --kv USERS",
+    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "start": "cross-env NODE_ENV=production npm run dev:wrangler"
   },
