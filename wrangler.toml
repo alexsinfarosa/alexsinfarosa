@@ -1,10 +1,9 @@
 name = "alexsinfarosa"
 type = "javascript"
+account_id = "1442179bab093913e938bfd19778f224"
 
-account_id = ""
-workers_dev = true
-route = ""
-zone_id = ""
+# zone_id = "your-zone-id"
+routes = ["alexsinfarosa.com/*", "localhost:8788/*"]
 
 kv_namespaces = [
   {binding = "NEWA", id = "1d289899395f4a3c9769daef121782cd"},
